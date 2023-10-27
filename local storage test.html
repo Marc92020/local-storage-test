@@ -1,0 +1,25 @@
+<html>
+<head><title>local storage test</title></head>
+<body>
+<h1>local storage test</h1>
+<p>press the buttons</p>
+
+<script>
+function createLocalStorage() {
+thingLS = window.prompt("name");
+valueLS = window.prompt("value");
+localStorage.setItem(thingLS, valueLS);
+console.log(localStorage.getItem(thingLS));
+}
+</script>
+<script>
+function getLocalStorage() {
+var thingLS2;
+thingLS2 = window.prompt("name of local storage item");
+window.alert(localStorage.getItem(thingLS2));
+}
+</script>
+<button onclick="createLocalStorage()">create/set local storage item</button>
+<button onclick="getLocalStorage()">get local storage item</button>
+</body>
+</html>
